@@ -8,6 +8,8 @@ import './m-about.css'
 import './d-about.css'
 
 const About = () => {
+    
+    
     return (
         <main className='k-about'>
             <section className='k-about__banner'>
@@ -16,12 +18,12 @@ const About = () => {
                 <div className='k-about__banner__background'></div>
             </section>
             <article className='k-about__collapse'>
-                {collapseAboutArray.map((items, index) => (
-                    <div className="k-about__collapse__container">
-                        <Collapse
+                {collapseAboutArray.map((item, index) => (
+                    <div key={index} className="k-about__collapse__container">
+                        <Collapse 
                             key={index}
-                            title={items.title}
-                            text={items.text}
+                            title={item.title}
+                            text={item.text}
                         />
                     </div>
                 ))}

@@ -59,26 +59,24 @@ const Lodgement = () => {
                 </div>
             </section>
             <article className='k-lodgement__collapse'>
-                {[lodgementCard].map((items, index) => (
-                    <>
-                        <div className="k-lodgement__collapse__container">
-                            <Collapse
-                                key={index}
-                                title={'Description'}
-                                text={items.description}
-                            />
-                        </div>
-                        <div className="k-lodgement__collapse__container">
-                            <Collapse
-                                key={index}
-                                title={'Equipements'} 
-                                text={lodgementCard.equipments.map((equip) => (
-                                    <li key={equip} equip={equip}>{equip}</li>
-                                ))}
-                            />
-                        </div>
-                    </>
-                ))}
+                <>
+                    <div className="k-lodgement__collapse__container">
+                        <Collapse
+                            key={lodgementCard.id}
+                            title={'Description'}
+                            text={lodgementCard.description}
+                        />
+                    </div>
+                    <div className="k-lodgement__collapse__container">
+                        <Collapse
+                            key={lodgementCard.id}
+                            title={'Equipements'} 
+                            text={lodgementCard.equipments.map((equip) => (
+                                <li key={equip} equip={equip}>{equip}</li>
+                            ))}
+                        />
+                    </div>
+                </>
             </article>
 		</main>
 
