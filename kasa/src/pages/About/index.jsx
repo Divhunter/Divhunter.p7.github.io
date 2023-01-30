@@ -9,7 +9,7 @@ import './d-about.css'
 
 const About = () => {
     
-    
+
     return (
         <main className='k-about'>
             <section className='k-about__banner'>
